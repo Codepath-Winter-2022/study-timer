@@ -66,6 +66,7 @@ Study Timer is an iOS application that helps people keep track of how long they 
 <img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
+- See Above
 
 ### [BONUS] Interactive Prototype
 
