@@ -62,8 +62,8 @@ Study Timer is an iOS application that helps people keep track of how long they 
    * Somewhere in the home screen, there will be a widget that allows you to go to the settings screen whne the icon is clicked
 
 ## Wireframes
-[Add picture of your hand sketched wireframes in this section]
-<img src="/wireframe.png" width=600>
+
+<img src="/wireframe.png" width=900>
 
 ### [BONUS] Digital Wireframes & Mockups
 - See Above
