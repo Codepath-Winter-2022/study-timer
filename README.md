@@ -73,8 +73,34 @@ Study Timer is an iOS application that helps people keep track of how long they 
 ## Schema 
 
 ### Models
-[Add table of models]
+Task
+| Property  | Type  | Description |
+| -------- | -------- | -------- |
+| Task ID     | String    |    unique id to identify the task  |
+|Name|String|name of task by author|
+|Icon| File| icon of the task|
+|Tags|Array|an array of tag strings given to the task
+|Time| Number|amount of time the timer will have for this task
+
+Timer
+| Property | Type | Description |
+| -------- | -------- | -------- |
+| start/stopButton     | Boolean  | button that allows the end user to satrt/stop the timer     |
+|time | DateTime | text that shows the end user how much time they have left |
+
+
+Settings
+| Property | Type | Description |
+| -------- | -------- | -------- |
+| volume | Number | Numerical value that the user determines for how loud htey want their timer |
+|timerSound | File | a sound that the user chooses that they want to hear when the timer is done |
+|timerStyle | Boolean | style of timer between analog and digital
 ### Networking
-- [Add list of network requests by screen ]
+* Home Screen
+    * (Read/GET) Query the database for the user and get all their tasks that they have planned
+
+* Task Screen
+    * (Create/POST) Create a new task object
+    * (Delete) Delete existing tasks
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
