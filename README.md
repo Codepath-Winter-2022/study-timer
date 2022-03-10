@@ -26,17 +26,17 @@ Study Timer is an iOS application that helps people keep track of how long they 
 
 **Required Must-have Stories**
 
-- [] Title Page with app name and logo
-- [] A timer to show how much time is left for current study session
-[] Start/Stop timer, be able to set how long you want the timer to run
-[] Stop timer button stops timer and sets timer box to 0
-[] Settings page
+- [ ] Title Page with app name and logo
+- [ ] A timer to show how much time is left for current study session
+- [ ] Start/Stop timer, be able to set how long you want the timer to run
+- [ ] Stop timer button stops timer and sets timer box to 0
+- [ ] Settings page
 
 
 **Optional Nice-to-have Stories**
 
-[] Tracker to show study history 
-[] Reminders (similar to to-do list)
+- [ ] Tracker to show study history 
+- [ ] Reminders (similar to to-do list)
 
 ### 2. Screen Archetypes
 
