@@ -7,7 +7,12 @@
 
 import UIKit
 
-class TimerViewController: UIViewController, SetTimerViewControllerDelegate {
+class TimerViewController: UIViewController {
+    
+    func timerTask(task: task) {
+        seconds = task.workDur
+        timerLabel.text = timeString(time: TimeInterval(seconds))
+    }
 
     @IBOutlet weak var timerLabel: UILabel!
     
@@ -19,8 +24,13 @@ class TimerViewController: UIViewController, SetTimerViewControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        timerLabel.text = timeString(time: TimeInterval(seconds))
+
     }
     
+    /*
+     controls the play pause button, if its the first press play the timer if it is the following press pause the timer
+     */
     @IBAction func playpauseButton(_ sender: Any) {
         if isTimerRunning == false{
             runTimer()
@@ -35,7 +45,10 @@ class TimerViewController: UIViewController, SetTimerViewControllerDelegate {
             playPressed = true
         }
     }
-
+    
+    /*
+     if the reset button is pressed stop timer and set time to 0
+     */
     @IBAction func resetButton(_ sender: Any) {
         if isTimerRunning == true{
             timer.invalidate()
@@ -50,15 +63,23 @@ class TimerViewController: UIViewController, SetTimerViewControllerDelegate {
         isTimerRunning = true
     }
     
+    /*
+     decrements the timer each second and stops the timer when it hits 0
+     */
     @objc func updateTimer(){
         if seconds < 1{
             timer.invalidate()
+            //isTimerRunning = false
+           // playPressed = false
         }else{
             seconds -= 1
             timerLabel.text = timeString(time: TimeInterval(seconds))
         }
     }
-
+    
+    /*
+     formats the time displayed to hours minutes seconds
+     */
     func timeString(time: TimeInterval) -> String {
         let hours = Int(time) / 3600
         let minutes = Int(time) / 60 % 60
@@ -66,15 +87,10 @@ class TimerViewController: UIViewController, SetTimerViewControllerDelegate {
         return String(format:"%02i:%02i:%02i", hours, minutes, seconds)
     }
     
-    func timeChange(time: Int) {
-        seconds = time
-        timerLabel.text = timeString(time: (TimeInterval(time)))
-    }
-    
+    /*
+     segue to the home view controller
+     */
     override func prepare(for segue:UIStoryboardSegue,sender:Any?){
-        if let SetTimerViewController = segue.destination as? SetTimerViewController{
-            SetTimerViewController.delegate = self
-        }
     }
     
     /*
