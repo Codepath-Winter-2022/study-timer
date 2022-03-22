@@ -21,7 +21,7 @@ Study Timer is an iOS application that helps people keep track of how long they 
 - **Scope:** Allow user to set a study timer and view their time remaining each study session.
 
 ### App progress
-<img src="https://github.com/Codepath-Winter-2022/study-timer/blob/main/gifs/checkpoint1.gif" width=200>
+<img src="https://github.com/Codepath-Winter-2022/study-timer/blob/main/gifs/checkpoint2.gif" width=200>
 
 ## Product Spec
 
@@ -32,7 +32,7 @@ Study Timer is an iOS application that helps people keep track of how long they 
 - [ ] Title Page with app name and logo
 - [x] A timer to show how much time is left for current study session
 - [x] Start/Stop timer, be able to set how long you want the timer to run
-- [ ] Stop timer button stops timer and sets timer box to 0
+- [x] Stop timer button stops timer and sets timer box to 0
 - [ ] Settings page
 
 
