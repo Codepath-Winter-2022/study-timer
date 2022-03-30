@@ -12,11 +12,13 @@ class TimerViewController: UIViewController {
     func timerTask(task: task) {
         seconds = task.workDur
         timerLabel.text = timeString(time: TimeInterval(seconds))
+        print(setTime)
     }
 
     @IBOutlet weak var timerLabel: UILabel!
     
     var seconds = 0
+    var setTime = 0
     var timer = Timer()
     var isTimerRunning = false
     var playPressed = false
@@ -25,7 +27,6 @@ class TimerViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         timerLabel.text = timeString(time: TimeInterval(seconds))
-
     }
     
     /*
@@ -52,9 +53,9 @@ class TimerViewController: UIViewController {
     @IBAction func resetButton(_ sender: Any) {
         if isTimerRunning == true{
             timer.invalidate()
-            seconds = 0
-            timerLabel.text = timeString(time: TimeInterval(seconds))
+            seconds = setTime
             isTimerRunning = false
+            timerLabel.text = timeString(time: TimeInterval(seconds))
         }
     }
     
@@ -69,6 +70,10 @@ class TimerViewController: UIViewController {
     @objc func updateTimer(){
         if seconds < 1{
             timer.invalidate()
+            showPopUp()
+            seconds = setTime
+            isTimerRunning = false
+            timerLabel.text = timeString(time: TimeInterval(seconds))
             //isTimerRunning = false
            // playPressed = false
         }else{
@@ -85,6 +90,21 @@ class TimerViewController: UIViewController {
         let minutes = Int(time) / 60 % 60
         let seconds = Int(time) % 60
         return String(format:"%02i:%02i:%02i", hours, minutes, seconds)
+    }
+    
+    /*
+     sends notif when task done
+     */
+    func showPopUp(){
+        let alert = UIAlertController(title: "Time's up!", message: "You've finished a time interval for this task", preferredStyle: .alert)
+        let okayAction = UIAlertAction(title: "Okay", style: .default)
+        {(action) in
+            print(action)
+        }
+        
+        alert.addAction(okayAction)
+        
+        present(alert, animated: true, completion: nil)
     }
     
     /*

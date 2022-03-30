@@ -11,9 +11,7 @@ import UIKit
  */
 class task{
     var name:String = ""
-    var breakDur = 0
     var workDur = 0
-    var icon:UIImage? = nil
 }
 
 protocol TaskSettingsViewControllerDelegate: AnyObject {
@@ -26,8 +24,6 @@ class TaskSettingsViewController: UIViewController {
     weak var delegate: TaskSettingsViewControllerDelegate?
     
     @IBOutlet weak var workTime: UIDatePicker!
-    @IBOutlet weak var breakTime: UIDatePicker!
-    @IBOutlet weak var taskIcon: UIImageView!
     @IBOutlet weak var taskName: UITextField!
     /*
      when user completes task creation add it to task list
@@ -35,9 +31,7 @@ class TaskSettingsViewController: UIViewController {
     @IBAction func onDone(_ sender: Any) {
         let newTask = task()
         newTask.name = taskName.text ?? ""
-        newTask.breakDur = Int(breakTime.countDownDuration)
         newTask.workDur = Int(workTime.countDownDuration)
-        newTask.icon = taskIcon.image
         
         delegate?.retrieveTask(task: newTask)
         

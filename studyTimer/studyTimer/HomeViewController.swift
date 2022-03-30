@@ -11,8 +11,9 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     var taskArray = [task]()
     
-    @IBOutlet weak var TimeleftLabel: UILabel!
-    @IBOutlet weak var TimeRemainingButton: UIButton!
+
+    @IBOutlet weak var lastTaskLabel: UILabel!
+    @IBOutlet weak var lastTaskButton: UIButton!
     @IBOutlet weak var TaskLabel: UILabel!
     @IBOutlet weak var taskTable: UITableView!
     
@@ -43,6 +44,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         taskArray.append(task)
         self.taskTable.reloadData()
     }
+    
     /*
      segue to settings and timer views
      */
@@ -52,7 +54,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
         if let timerController = segue.destination as? TimerViewController{
             timerController.seconds = taskArray[taskTable.indexPathForSelectedRow!.row].workDur
-            print(timerController.seconds)
+            timerController.setTime = taskArray[taskTable.indexPathForSelectedRow!.row].workDur
+            lastTaskButton.setTitle(taskArray[taskTable.indexPathForSelectedRow!.row].name, for: .normal)
         }
     }
 

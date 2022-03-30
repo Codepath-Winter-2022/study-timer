@@ -19,8 +19,6 @@
 		3D10A2E627E14E120000B1F5 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D10A2E527E14E120000B1F5 /* TimerViewController.swift */; };
 		3D10A2E827E17CD30000B1F5 /* TaskSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D10A2E727E17CD30000B1F5 /* TaskSettingsViewController.swift */; };
 		3D785A9B27E98730003B0EC5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D785A9A27E98730003B0EC5 /* HomeViewController.swift */; };
-		3DCC0F3E27E9CDCE0011189F /* TagsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCC0F3D27E9CDCE0011189F /* TagsViewController.swift */; };
-		3DCC0F4027E9CECA0011189F /* IconsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCC0F3F27E9CECA0011189F /* IconsViewController.swift */; };
 		3DCC0F4427E9D5AA0011189F /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCC0F4327E9D5AA0011189F /* TaskTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,8 +56,6 @@
 		3D10A2E527E14E120000B1F5 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		3D10A2E727E17CD30000B1F5 /* TaskSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskSettingsViewController.swift; sourceTree = "<group>"; };
 		3D785A9A27E98730003B0EC5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		3DCC0F3D27E9CDCE0011189F /* TagsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsViewController.swift; sourceTree = "<group>"; };
-		3DCC0F3F27E9CECA0011189F /* IconsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsViewController.swift; sourceTree = "<group>"; };
 		3DCC0F4327E9D5AA0011189F /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,8 +115,6 @@
 				3D10A2E527E14E120000B1F5 /* TimerViewController.swift */,
 				3DCC0F4327E9D5AA0011189F /* TaskTableViewCell.swift */,
 				3D10A2E727E17CD30000B1F5 /* TaskSettingsViewController.swift */,
-				3DCC0F3F27E9CECA0011189F /* IconsViewController.swift */,
-				3DCC0F3D27E9CDCE0011189F /* TagsViewController.swift */,
 				3D10A2BE27E1496E0000B1F5 /* Assets.xcassets */,
 				3D10A2C027E1496E0000B1F5 /* LaunchScreen.storyboard */,
 				3D10A2C327E1496E0000B1F5 /* Info.plist */,
@@ -281,10 +275,8 @@
 				3D10A2E627E14E120000B1F5 /* TimerViewController.swift in Sources */,
 				3D10A2BA27E1496B0000B1F5 /* ViewController.swift in Sources */,
 				3D10A2B627E1496B0000B1F5 /* AppDelegate.swift in Sources */,
-				3DCC0F3E27E9CDCE0011189F /* TagsViewController.swift in Sources */,
 				3D10A2B827E1496B0000B1F5 /* SceneDelegate.swift in Sources */,
 				3D785A9B27E98730003B0EC5 /* HomeViewController.swift in Sources */,
-				3DCC0F4027E9CECA0011189F /* IconsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
